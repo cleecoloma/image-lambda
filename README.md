@@ -1,5 +1,5 @@
 # Image Lambda
-> This lambda function updates an images.json in s3bucket that gets triggered when image-lambda-storage/images folder gets updated. It pushes file name, file size, and file type
+> This lambda function updates an images.json in s3bucket that gets triggered when image-lambda-storage/images folder gets updated. It pushes file name and file size.
 
 ## Link to images.json file
 [Images.json](https://image-lambda-storage.s3.us-west-2.amazonaws.com/images/images.json#)
