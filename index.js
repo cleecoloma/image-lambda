@@ -1,10 +1,10 @@
-const { S3 } = require('@aws-sdk/client-s3'); // code preinstalled by AWS, to do S3 operations -> Reading and Writing
+const { S3 } = require('@aws-sdk/client-s3');
 
 let s3 = new S3({ region: 'us-west-2' });
 
 exports.handler = async (event) => {
   const bucketName = event.Records[0].s3.bucket.name;
-  const key = 'images/images.json'; // Name of the JSON file in the bucket
+  const key = 'images/images.json';
 
   try {
     // Download the existing images.json file from S3 (if it exists)
@@ -21,8 +21,6 @@ exports.handler = async (event) => {
     const imageMetadata = {
       name: event.Records[0].s3.object.key,
       size: event.Records[0].s3.object.size,
-      type: event.Records[0].s3.object.contentType,
-      // Add other metadata properties as needed
     };
 
     // Check if the image with the same name already exists
