@@ -20,6 +20,7 @@ exports.handler = async (event) => {
     // Extract image metadata from the S3 event
     const imageMetadata = {
       name: event.Records[0].s3.object.key,
+      type: event.Records[0].s3.object.contentType,
       size: event.Records[0].s3.object.size,
     };
 
