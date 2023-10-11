@@ -1,8 +1,8 @@
-import { S3 } from '@aws-sdk/client-s3'; // code preinstalled by AWS, to do S3 operations -> Reading and Writing
+const { S3 } = require('@aws-sdk/client-s3'); // code preinstalled by AWS, to do S3 operations -> Reading and Writing
 
 let s3 = new S3({ region: 'us-west-2' });
 
-export const handler = async (event) => {
+exports.handler = async (event) => {
   const bucketName = event.Records[0].s3.bucket.name;
   const key = 'images/images.json'; // Name of the JSON file in the bucket
 
