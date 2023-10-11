@@ -48,7 +48,6 @@ export const handler = async (event) => {
       Body: updatedImageData,
       ContentType: 'application/json',
     });
-    // .promise();
 
     return {
       statusCode: 200,
