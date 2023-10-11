@@ -11,3 +11,4 @@
 
 ## Contributors
 * Chester Lee Coloma
+* ChatGPT (help with function)
